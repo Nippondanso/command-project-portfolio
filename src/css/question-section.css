@@ -25,6 +25,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 80px;
 }
 
 .questions-section[data-theme='light'] {
@@ -209,6 +210,9 @@ body .ac.is-active::after {
 }
 
 @media (min-width: 768px) {
+ .questions-section {
+   margin-bottom: 124px;
+ }
   #questions-list {
     max-width: 704px;
     margin-top: 60px;
@@ -243,6 +247,7 @@ body .ac.is-active::after {
     align-items: flex-start;
     justify-content: space-between;
     padding: 0 32px;
+    margin-bottom: 164px;
   }
 
   #questions-list {
