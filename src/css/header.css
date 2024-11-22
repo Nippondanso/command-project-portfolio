@@ -60,10 +60,10 @@
 }
 
 .icon-menu-button[data-theme='light'] {
-    color: #292929;
+    fill: #292929;
 }
 .icon-menu-button[data-theme='dark'] {
-    color: #f0f0f0;
+    fill: #f0f0f0;
 }
 
 @media screen and (min-width: 768px) {

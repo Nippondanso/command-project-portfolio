@@ -79,11 +79,11 @@
 }
 
 .modal-close-bth-icon[data-theme='light'] {
-    color: #292929;
+    fill: #292929;
 }
 
 .modal-close-bth-icon[data-theme='dark'] {
-    color: #f0f0f0;
+    fill: #f0f0f0;
 }
 
 .modal-close-bth {
