@@ -1,0 +1,142 @@
+.additional {
+    display: flex;
+    justify-content: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 360px;
+    height: 64px;
+}
+
+.header-container[data-theme='light'] {
+    background-color: #f0f0f0;
+}
+.header-container[data-theme='dark'] {
+    background-color: #1e2023;
+}
+
+
+
+.logo-text {
+    font-family: "Impact", sans-serif;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-left: 20px;
+    display: block;
+}
+
+.logo-text[data-theme='light'] {
+    color: #292929;
+}
+
+.logo-text[data-theme='dark'] {
+    color: #f0f0f0;
+}
+
+.logo-span[data-theme='light'] {
+    color: #00b068;
+}
+
+.logo-span[data-theme='dark'] {
+    color: #14c57c;
+}
+
+.nav-text {
+    display: none;
+}
+
+.menu-button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.icon-menu-button[data-theme='light'] {
+    fill: #292929;
+}
+.icon-menu-button[data-theme='dark'] {
+    fill: #f0f0f0;
+}
+
+@media screen and (min-width: 768px) {
+    
+    .menu-button {
+        display: none;
+    }
+
+    .mod-menu {
+        display: none;
+    }
+
+    .header-container {
+        width: 768px;
+        height: 96px;
+    }
+
+     .logo-text {
+        font-size: 32px;
+        letter-spacing: 0.05em;
+        margin-left: 32px;
+        margin-right: 191px;
+    }
+
+    .nav-text {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        
+    }
+
+    .header-nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-text-link {
+        display: block;
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.03em;
+        text-align: center;
+    }
+
+    .nav-text-link[data-theme='light'] {
+        color: #292929;
+    }
+
+    .nav-text-link[data-theme='dark'] {
+        color: #f0f0f0;
+    }
+
+    .nav-text-link:hover[data-theme='light'] {
+        color: #00b068;
+    }
+    .nav-text-link:hover[data-theme='dark'] {
+        color: #14c57c;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .additional {
+        margin-bottom: 16px;
+    }
+
+    .header-container {
+        width: 1280px;
+    }
+
+    .logo-text {
+        margin-right: 703px;
+    }
+}
+
+
