@@ -5,34 +5,34 @@
 @import url('./header.css');
 @import url('./mobile-menu.css');
 @import url('./tech-skills.css');
-
+@import url('./question-section.css');
 
 :root {
-  --font-family: "Poppins", sans-serif;
-  --second-family: "Impact", sans-serif;
-  --third-family: "Montserrat", sans-serif;
+  --font-family: 'Poppins', sans-serif;
+  --second-family: 'Impact', sans-serif;
+  --third-family: 'Montserrat', sans-serif;
   /*--color-dark: #040306;*/
   /*--color-dark-blue: #0e1823;*/
   /*--color-dark-green: #1b414b;*/
   /*--color-light: #fbfbfb;*/
 
   --color-black: #292929;
-  --color-accet-green: #00B068;
-  --color-white: #F0F0F0;
-  --color-light-gray: #E4E5E6;
-  --color-light-accet: #BCDFD1;
-  --color-error: #E74A3B;
-  --color-hover-grey: #BBBBBB;
+  --color-accet-green: #00b068;
+  --color-white: #f0f0f0;
+  --color-light-gray: #e4e5e6;
+  --color-light-accet: #bcdfd1;
+  --color-error: #e74a3b;
+  --color-hover-grey: #bbbbbb;
 
-  --color-black-dt: #1E2023;
-  --color-accet-green-dt: #14C57C;
-  --color-white-dt: #F0F0F0;
-  --color-charcoal-dt: #2A2D32;
+  --color-black-dt: #1e2023;
+  --color-accet-green-dt: #14c57c;
+  --color-white-dt: #f0f0f0;
+  --color-charcoal-dt: #2a2d32;
   --color-dark-accet-dt: #204136;
-  --color-hover-charcoal-dt: #3B3F45;
+  --color-hover-charcoal-dt: #3b3f45;
 }
 
-[data-theme="light"] {
+[data-theme='light'] {
   /*  --color-black: #292929;*/
   /*  --color-white: #F0F0F0;*/
   /*  --color-accet: #00B068;*/
@@ -43,7 +43,7 @@
   /*  --color-input-bg-hover: #BBBBBB;*/
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   --color-bg: var(--color-black-dt);
   /*  --color-accet: #14C57C;*/
   /*  --color-black: #292929;*/

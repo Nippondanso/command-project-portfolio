@@ -17,6 +17,7 @@
   "author": "Andriy Kostyushko <a.v.kostyushko89@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "accordion-js": "^3.3.4",
     "vite-plugin-full-reload": "^1.2.0",
     "vite-plugin-html-inject": "^1.1.2"
   }
