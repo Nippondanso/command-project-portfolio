@@ -1,7 +1,6 @@
 .additional {
     display: flex;
     justify-content: center;
-    margin-bottom: 80px;
 }
 
 .header-container {
@@ -67,9 +66,6 @@
 }
 
 @media screen and (min-width: 768px) {
-    .additional {
-        margin-bottom: 124px;
-    }
     
     .menu-button {
         display: none;
@@ -131,7 +127,7 @@
 
 @media screen and (min-width: 1280px) {
     .additional {
-        margin-bottom: 164px;
+        margin-bottom: 16px;
     }
 
     .header-container {
