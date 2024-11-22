@@ -144,6 +144,7 @@ body .ac.is-active .question-button-image {
 }
 
 body .ac {
+  position: relative;
   margin: 0;
   border: none;
   box-sizing: border-box;
@@ -162,11 +163,9 @@ body .ac {
   top: calc(100% - 1px);
   left: 0;
   z-index: 1;
-  transition: z-index 100ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 250ms;
 }
 
-body .ac.is-active .question-item::after {
+body .question-item.is-active::after {
   z-index: -1;
 }
 
