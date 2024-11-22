@@ -179,7 +179,8 @@ body .ac.is-active .question-item::after {
 }
 
 body .ac .ac-panel {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: margin-top 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: all;
 }
 
 body .ac .ac-panel .ac-text {
@@ -201,7 +202,7 @@ body .ac .ac-panel .ac-text[data-theme='dark'] {
 }
 
 body .ac.is-active .ac-panel {
-  padding-top: 24px;
+  margin-top: 24px;
 }
 
 body .ac.is-active::after {
