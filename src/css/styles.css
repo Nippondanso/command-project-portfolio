@@ -4,6 +4,7 @@
 @import url('./common.css');
 @import url('./tech-skills.css');
 @import url('./question-section.css');
+@import url('./about-me.css');
 
 :root {
   --font-family: 'Poppins', sans-serif;
