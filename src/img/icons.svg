@@ -9,7 +9,7 @@
             <path fill="none" stroke-linejoin="miter" stroke-linecap="round" stroke-width="7.1111"
                 d="M46.222 3.556l-21.333 21.333-21.333-21.333"></path>
         </symbol>
-        <symbol id="icon-tel" viewBox="0 0 32 32">
+         <symbol id="icon-tel" viewBox="0 0 32 32">
             <path fill="none" stroke="#14c57c" style="stroke: var(--color1, #14c57c)"
                 stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4"
                 stroke-width="1.3333"
