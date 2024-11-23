@@ -25,7 +25,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 80px;
+  margin: 0 auto 80px;
 }
 
 .questions-section[data-theme='light'] {
@@ -37,6 +37,8 @@
 }
 
 #questions-list {
+  display: flex;
+  flex-direction: column;
   background-color: inherit;
   margin: 40px 0 0;
   padding: 0;
@@ -210,9 +212,9 @@ body .ac.is-active::after {
 }
 
 @media (min-width: 768px) {
- .questions-section {
-   margin-bottom: 124px;
- }
+  .questions-section {
+    margin-bottom: 124px;
+  }
   #questions-list {
     max-width: 704px;
     margin-top: 60px;
@@ -232,6 +234,7 @@ body .ac.is-active::after {
 
 @media (min-width: 1280px) {
   .questions-section {
+    max-width: 1280px;
     background-image: image-set(
       url('../img/questions-section-images/questions-section-bg.png') 1x,
       url('../img/questions-section-images/questions-section-bg@2x.png') 2x
