@@ -110,6 +110,7 @@ ul {
   padding-right: 16px;
   border: none;
   box-sizing: border-box;
+  outline: none;
 }
 
 @media (max-width: 767px) {
@@ -154,6 +155,8 @@ ul {
   background-color: #e4e5e6;
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
+  resize: none;
+  outline: none;
 }
 
 .contact-section[data-theme='dark'] #message {
