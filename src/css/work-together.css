@@ -196,15 +196,16 @@ ul {
 }
 
 .modal-content {
+  position: relative;
   background-color: #f0f0f0;
   padding: 16px;
   text-align: center;
   border: none;
   border-radius: 16px;
   margin-top: 214px;
-  padding-bottom: 48px;
   width: 256px;
-  margin-left: 35px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contact-section[data-theme='dark'] .modal-content {
@@ -213,8 +214,12 @@ ul {
 }
 
 .button-close {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 20px;
+  right: 20px;
   padding: 0;
-  margin-left: 236px;
   border: none;
   background: none;
 }
@@ -234,8 +239,7 @@ ul {
 }
 
 #modal-message {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 32px 0;
   margin-left: 12px;
   margin-right: 12px;
 }
@@ -319,23 +323,12 @@ ul {
     padding-left: 64px;
     padding-right: 64px;
     padding-bottom: 64px;
-    margin-left: 0;
-    margin-right: 0;
     width: 364px;
   }
 
   #modal-message {
     margin-left: 0;
     margin-right: 0;
-  }
-
-  .button-close {
-    margin-left: 388px;
-  }
-
-  .modal {
-    padding-left: 138px;
-    padding-right: 138px;
   }
 
   .background {
@@ -389,10 +382,6 @@ ul {
     width: 470px;
     position: relative;
     top: 0;
-  }
-
-  .modal {
-    padding: 0;
   }
 
   .modal-content {
