@@ -8,10 +8,12 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   background-color: #f0f0f0;
-  margin-bottom: 80px;
+  margin: 0 auto 80px;
+  box-sizing: border-box;
+  position: relative;
 }
 
-[data-theme='dark'] .contact-section {
+.contact-section[data-theme='dark'] {
   background-color: #1e2023;
 }
 
@@ -26,7 +28,7 @@ body {
   margin: 0;
 }
 
-[data-theme='dark'] .title {
+.contact-section[data-theme='dark'] .title {
   color: #f0f0f0;
 }
 
@@ -47,7 +49,7 @@ body {
   margin-bottom: 32px;
 }
 
-[data-theme='dark'] .text {
+.contact-section[data-theme='dark'] .text {
   color: #f0f0f0;
 }
 
@@ -55,6 +57,10 @@ ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+
+.contacts svg {
+  margin-right: 16px;
 }
 
 .contacts {
@@ -72,11 +78,11 @@ ul {
   color: #14c57c;
 }
 
-[data-theme='dark'] .contacts {
+.contact-section[data-theme='dark'] .contacts {
   color: #f0f0f0;
 }
 
-[data-theme='dark'] .contacts:hover,
+.contact-section[data-theme='dark'] .contacts:hover,
 .contacts:focus {
   color: #14c57c;
 }
@@ -86,6 +92,7 @@ ul {
   flex-direction: column;
   gap: 32px;
   margin-top: 40px;
+  width: 100%;
 }
 
 .email-input {
@@ -102,9 +109,27 @@ ul {
   padding-left: 16px;
   padding-right: 16px;
   border: none;
+  box-sizing: border-box;
 }
 
-[data-theme='dark'] .email-input {
+@media (max-width: 767px) {
+  .email-input {
+    width: 100%;
+  }
+  #message {
+    width: 100%;
+  }
+  .button {
+    width: 100%;
+  }
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.contact-section[data-theme='dark'] .email-input {
   background-color: #2a2d32;
   color: #f0f0f0;
 }
@@ -113,7 +138,7 @@ ul {
   color: #292929;
 }
 
-[data-theme='dark'] ::placeholder {
+.contact-section[data-theme='dark'] ::placeholder {
   color: #f0f0f0;
 }
 
@@ -128,9 +153,10 @@ ul {
   padding: 16px;
   background-color: #e4e5e6;
   font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
 }
 
-[data-theme='dark'] #message {
+.contact-section[data-theme='dark'] #message {
   background-color: #2a2d32;
   color: #f0f0f0;
 }
@@ -146,8 +172,7 @@ ul {
   border: none;
   border-radius: 8px;
   font-family: 'Poppins', sans-serif;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding: 12px 24px;
   cursor: pointer;
 }
 
@@ -180,7 +205,7 @@ ul {
   margin-left: 35px;
 }
 
-[data-theme='dark'] .modal-content {
+.contact-section[data-theme='dark'] .modal-content {
   background-color: #2a2d32;
   border: none;
 }
@@ -189,9 +214,10 @@ ul {
   padding: 0;
   margin-left: 236px;
   border: none;
+  background: none;
 }
 
-[data-theme='dark'] .button-close {
+.contact-section[data-theme='dark'] .button-close {
   background-color: #2a2d32;
 }
 
@@ -200,7 +226,7 @@ ul {
   stroke: #000;
 }
 
-[data-theme='dark'] .close {
+.contact-section[data-theme='dark'] .close {
   fill: #f0f0f0;
   stroke: #f0f0f0;
 }
@@ -236,7 +262,7 @@ ul {
   margin: 0;
 }
 
-[data-theme='dark'] .modal-info {
+.contact-section[data-theme='dark'] .modal-info {
   color: #f0f0f0;
 }
 
@@ -249,7 +275,13 @@ ul {
     max-width: 768px;
     padding-left: 32px;
     padding-right: 32px;
-    margin-bottom: 124px;
+    margin: 0 auto 124px;
+  }
+
+  .contacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .title {
@@ -278,7 +310,7 @@ ul {
   }
 
   .button {
-    width: 173px;
+    width: fit-content;
   }
 
   .modal-content {
@@ -307,9 +339,9 @@ ul {
   .background {
     display: block;
     position: absolute;
-    width: 336px;
-    left: 50%;
-    top: 15%;
+    width: 436px;
+    right: 0;
+    top: -140px;
   }
 }
 
@@ -322,6 +354,8 @@ ul {
     gap: 80px;
     column-gap: 138px;
     margin-bottom: 164px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .title {
@@ -335,11 +369,13 @@ ul {
   }
 
   .text {
+    margin-bottom: 110px;
     width: 488px;
   }
 
   ul {
     flex-direction: column;
+    align-items: flex-start;
   }
 
   #contact-form {
@@ -351,7 +387,6 @@ ul {
     width: 470px;
     position: relative;
     top: 0;
-    left: 0;
   }
 
   .modal {
