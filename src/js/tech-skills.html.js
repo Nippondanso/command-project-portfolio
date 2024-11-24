@@ -1,3 +1,4 @@
+import icons from './img/icons.svg';
 import { TECH_SKILLS } from '../constants.js';
 
 const tech = [{
