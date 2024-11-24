@@ -26,6 +26,8 @@
   flex-direction: column;
   /* align-items: center; */
   margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .about-section[data-theme='light'] {
@@ -88,7 +90,7 @@
 
 .about-images {
   border-radius: 16px;
-  width: 320px;
+  min-width: 320px;
   height: 374px;
   margin-bottom: 40px;
 }
@@ -234,6 +236,7 @@
   .about-education-section {
     display: flex;
     gap: 32px;
+    flex-direction: row;
   }
   .about-me-list {
     max-width: 336px;
@@ -254,7 +257,7 @@
       url('../img/about-section-images/about-bg-desctop.png') 1x,
       url('../img/about-section-images/about-bg-desctop@2x.png') 2x
     );
-    background-position: 700px 700px;
+    background-position: 1000px 700px;
     background-size: 396px 302px;
   }
   .about-images {
