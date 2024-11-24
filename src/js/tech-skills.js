@@ -51,7 +51,6 @@ const contentMarkup = (content, place = TECH_SKILLS.PLACE.UPPER) =>
             }">${tech.name}</div>
           </a>`;
   });
-console.log(TECH_SKILLS.SEPARATOR_SVG_LOC);
 
 const buildTechLine = (markup, reverse = false) => {
   let element1 = document.createElement('div');
