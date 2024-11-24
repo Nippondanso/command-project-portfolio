@@ -1,12 +1,51 @@
+[data-theme='light'] {
+  --color-text: var(--color-black);
+  --color-accent: var(--color-light-gray);
+}
+
+[data-theme='dark'] {
+  --color-text: var(--color-white);
+  --color-accent: var(--color-charcoal-dt);
+}
+
+.section-reviews {
+  margin-bottom: 164px;
+}
+
+@media (max-width: 1024px) {
+  .section-reviews {
+    margin-bottom: 124px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-reviews {
+    margin-bottom: 80px;
+  }
+}
+
 .title-reviews {
-  font-family: 'Impact';
+  font-family: var(--second-family);
   height: 124px;
   font-weight: 400;
   font-size: 108px;
   letter-spacing: 0.03em;
-  color: var(--color-black);
+  color: var(--color-text);
   text-align: center;
   margin-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+  .title-reviews {
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 360px) {
+  .title-reviews {
+    margin-bottom: 40px;
+    height: 64px;
+    font-size: 52px;
+  }
 }
 
 .feedback-avatar {
@@ -29,7 +68,7 @@
 .swiper-slide.feedback-item {
   box-sizing: border-box;
   padding: 32px;
-  background-color: var(--color-light-gray);
+  background-color: var(--color-accent);
   border-radius: 16px;
   display: flex;
   justify-content: space-between;
@@ -38,13 +77,13 @@
 }
 
 .feedback-text {
-  font-family: 'Poppins';
+  font-family: var(--font-family);
   margin-bottom: 24px;
   font-weight: 300;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.03em;
-  color: var(--color-black);
+  color: var(--color-text);
 }
 
 .feedback-author {
@@ -53,7 +92,7 @@
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.03em;
-  color: var(--color-black);
+  color: var(--color-text);
 }
 
 .reviews-navigation {
@@ -64,7 +103,7 @@
 }
 
 .nav-button {
-  border: 1px solid var(--color-light-gray);
+  border: 1px solid var(--color-accent);
   border-radius: 8px;
   box-sizing: border-box;
   padding: 11px;
@@ -78,7 +117,7 @@
 
 .error-message {
   margin-top: 50px;
-  color: var(--color-black);
+  color: var(--color-text);
   text-align: center;
   height: 62px;
   font-weight: 200;
@@ -90,19 +129,20 @@
 }
 
 .nav-button:hover {
-  background: var(--color-light-gray);
-  border: 1px solid var(--color-black);
+  background: var(--color-accent);
+  border: 1px solid var(--color-text);
 }
 
 .nav-icon {
   width: 100%;
   height: 100%;
-  stroke: var(--color-black);
+  stroke: var(--color-text);
 }
 
 .button-disabled {
-  pointer-events: none;
   .nav-icon {
-    stroke: var(--color-light-gray);
+    stroke: var(--color-accent);
+    border: 1px solid transparent;
   }
+  pointer-events: none;
 }
