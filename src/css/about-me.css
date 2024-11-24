@@ -161,6 +161,8 @@
 }
 
 #about-list-role {
+  display: flex;
+  flex-direction: column;
   list-style-type: disc;
   margin-left: 20px;
 }
@@ -229,6 +231,8 @@
     height: 392px;
   }
   #about-list {
+    display: flex;
+    flex-direction: column;
     margin-left: 32px;
   }
   .about-bio-section {
