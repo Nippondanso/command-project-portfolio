@@ -1,3 +1,5 @@
+import icons from './src/img/icons.svg';
+
 export const TECH_SKILLS ={
   'CSS_SELECTOR':{
     'WRAP_CLASS': '.wrap',
@@ -11,7 +13,7 @@ export const TECH_SKILLS ={
     'ITEM_UPPER':'item-upper',
     'ITEM_LOWER':'item-lower',
   },
-  'SEPARATOR_SVG_LOC': './img/icons.svg#icon-dot',
+  'SEPARATOR_SVG_LOC': `${icons}#icon-dot`,
   'PLACE':{
     'UPPER': 'upper',
     'LOWER': 'lower'

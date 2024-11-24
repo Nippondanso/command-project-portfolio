@@ -1,0 +1,148 @@
+[data-theme='light'] {
+  --color-text: var(--color-black);
+  --color-accent: var(--color-light-gray);
+}
+
+[data-theme='dark'] {
+  --color-text: var(--color-white);
+  --color-accent: var(--color-charcoal-dt);
+}
+
+.section-reviews {
+  margin-bottom: 164px;
+}
+
+@media (max-width: 1024px) {
+  .section-reviews {
+    margin-bottom: 124px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-reviews {
+    margin-bottom: 80px;
+  }
+}
+
+.title-reviews {
+  font-family: var(--second-family);
+  height: 124px;
+  font-weight: 400;
+  font-size: 108px;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+@media (max-width: 767px) {
+  .title-reviews {
+    margin-bottom: 60px;
+    height: 64px;
+    font-size: 52px;
+  }
+}
+@media (max-width: 360px) {
+  .title-reviews {
+    margin-bottom: 40px;
+  }
+}
+
+.feedback-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 24px;
+}
+
+.feedback-info {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.swiper {
+  position: relative;
+  max-width: 100%;
+}
+
+.swiper-slide.feedback-item {
+  box-sizing: border-box;
+  padding: 32px;
+  background-color: var(--color-accent);
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: auto;
+}
+
+.feedback-text {
+  font-family: var(--font-family);
+  margin-bottom: 24px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+}
+
+.feedback-author {
+  font-family: 'Popins-Regular', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+}
+
+.reviews-navigation {
+  display: flex;
+  margin-top: 24px;
+  gap: 16px;
+  justify-content: flex-end;
+}
+
+.nav-button {
+  border: 1px solid var(--color-accent);
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 11px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.error-message {
+  margin-top: 50px;
+  color: var(--color-text);
+  text-align: center;
+  height: 62px;
+  font-weight: 200;
+  font-size: 54px;
+}
+
+.hidden {
+  display: none;
+}
+
+.nav-button:hover {
+  background: var(--color-accent);
+  border: 1px solid var(--color-text);
+}
+
+.nav-icon {
+  width: 100%;
+  height: 100%;
+  stroke: var(--color-text);
+}
+
+.button-disabled {
+  .nav-icon {
+    stroke: var(--color-accent);
+    border: 1px solid transparent;
+  }
+  pointer-events: none;
+}
