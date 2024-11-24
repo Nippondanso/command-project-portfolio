@@ -24,10 +24,10 @@
   padding: 0 20px;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   margin-bottom: 80px;
   margin-left: auto;
   margin-right: auto;
+  max-width: 360px;
 }
 
 .about-section[data-theme='light'] {
@@ -90,9 +90,13 @@
 
 .about-images {
   border-radius: 16px;
-  min-width: 320px;
-  height: 374px;
+  min-width: 100%;
+  height: 100%;
   margin-bottom: 40px;
+}
+
+.about-bio-section {
+  max-width: 360px;
 }
 
 .about-description {
@@ -206,6 +210,7 @@
     background-position: 368px 856px;
     background-repeat: no-repeat;
     background-size: 346px 264px;
+    max-width: none;
   }
   .about-section-header {
     font-size: 108px;
@@ -229,6 +234,7 @@
   .about-bio-section {
     display: flex;
     gap: 32px;
+    max-width: 704px;
   }
   .about-panel {
     max-width: 336px;
@@ -257,7 +263,7 @@
       url('../img/about-section-images/about-bg-desctop.png') 1x,
       url('../img/about-section-images/about-bg-desctop@2x.png') 2x
     );
-    background-position: 1000px 700px;
+    background-position: 800px 700px;
     background-size: 396px 302px;
   }
   .about-images {
@@ -269,6 +275,7 @@
     gap: 136px;
     justify-content: center;
     margin-left: 240px;
+    max-width: 1008px;
   }
   .about-panel {
     max-width: 488px;
