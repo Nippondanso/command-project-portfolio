@@ -6,18 +6,7 @@ img {
 ul {
   list-style-type: none;
 }
-@font-face {
-  font-family: 'impact';
-  src: url('./src/fonts/impact.ttf') format('ttf');
-}
-@font-face {
-  font-family: 'poppins-300';
-  src: url('./src/fonts/poppins/poppins-300.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'poppins-regular';
-  src: url('./src/fonts/poppins/poppins-regular.woff2') format('woff2');
-}
+
 .titleMain {
   font-family: 'impact', sans-serif;
   text-align: center;
@@ -42,7 +31,7 @@ ul {
   cursor: pointer;
 }
 .loadText {
-  font-family: 'poppins-300';
+  font-family: 'Poppins', sans-serif;
   font-size: 22px;
   font-weight: 500;
   line-height: 40px;
@@ -81,7 +70,7 @@ ul {
 }
 
 .projectTextTech {
-  font-family: 'poppins-300';
+  font-family: 'Poppins', sans-serif;
   text-transform: capitalize;
   font-size: 16px;
   line-height: 24px;
@@ -95,7 +84,7 @@ ul {
   flex-wrap: wrap;
 }
 .projectTextTitle {
-  font-family: 'poppins-regular';
+  font-family: 'Poppins', sans-serif;
   margin-bottom: 30px;
   font-size: 32px;
   font-weight: 500;
