@@ -27,18 +27,23 @@
 
 // SWITCH
 document.addEventListener('DOMContentLoaded', () => {
-  const themeToggle = document.getElementById('theme-toggle');
-  const body = document.body;
+  const themeToggle = document.getElementById('theme-toggle'); 
+  const themeElements = document.querySelectorAll('[data-theme]'); 
 
   const currentTheme = localStorage.getItem('theme') || 'light';
-  body.setAttribute('data-theme', currentTheme);
+  
+  themeElements.forEach(element => {
+    element.setAttribute('data-theme', currentTheme);
+  });
+
   themeToggle.checked = currentTheme === 'dark';
-
-
   themeToggle.addEventListener('change', () => {
     const newTheme = themeToggle.checked ? 'dark' : 'light';
-    body.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme); 
+    themeElements.forEach(element => {
+      element.setAttribute('data-theme', newTheme);
+    });
+
+    localStorage.setItem('theme', newTheme);
   });
 });
 
