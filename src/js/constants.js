@@ -1,4 +1,5 @@
-import icons from './img/icons.svg';
+import icons from '../img/icons.svg';
+
 export const TECH_SKILLS ={
   'CSS_SELECTOR':{
     'WRAP_CLASS': '.wrap',
