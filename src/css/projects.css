@@ -1,0 +1,256 @@
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+ul {
+  list-style-type: none;
+}
+@font-face {
+  font-family: 'impact';
+  src: url('./src/fonts/impact.ttf') format('ttf');
+}
+@font-face {
+  font-family: 'poppins-300';
+  src: url('./src/fonts/poppins/poppins-300.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'poppins-regular';
+  src: url('./src/fonts/poppins/poppins-regular.woff2') format('woff2');
+}
+.titleMain {
+  font-family: 'impact', sans-serif;
+  text-align: center;
+  margin: 0 15px 40px;
+}
+#projects {
+  background-color: #e4e5e6;
+}
+.LoadImg {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  column-gap: 15px;
+  margin: 40px auto 0;
+}
+.imgWrap {
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px rgb(228, 100, 100);
+}
+.siteLoad {
+  text-decoration: none;
+  cursor: pointer;
+}
+.loadText {
+  font-family: 'poppins-300';
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.projectFWrap,
+.projectSWrap,
+.projectTWrap {
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.mainNotice {
+  font-size: 38px;
+  text-transform: uppercase;
+  line-height: 64px;
+  letter-spacing: 1.8px;
+  font-weight: 400;
+  margin: 0 0 40px;
+  max-width: 291px;
+}
+.noticeSpan {
+  color: #00b068;
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 64px;
+  letter-spacing: 1.8px;
+  font-weight: 400;
+  display: block;
+}
+
+.projectTextTech {
+  font-family: 'poppins-300';
+  text-transform: capitalize;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+.wrapBtnText {
+  display: flex;
+  flex-wrap: wrap;
+}
+.projectTextTitle {
+  font-family: 'poppins-regular';
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.projectBtnVisit {
+  display: flex;
+  border-color: #bbbbbb;
+  background-color: #e4e5e6;
+  border-radius: 5px;
+  align-items: center;
+  padding: 12px 12px 12px 24px;
+  width: 125px;
+  height: 48px;
+  outline: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.05px;
+  text-transform: uppercase;
+}
+.projectBtnVisit:hover {
+  background-color: #bbbbbb;
+}
+.arrSvg {
+  margin-left: 12px;
+}
+
+.projectBtnLoad {
+  text-transform: uppercase;
+  font-size: 17px;
+  line-height: 28px;
+  letter-spacing: 0.5px;
+  padding: 12px 24px;
+  font-weight: 400;
+  border: none;
+  background: none;
+  color: #000;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  display: block;
+  margin: 40px auto 0;
+}
+.projectBtnLoad::after {
+  content: '';
+  position: absolute;
+  left: 7.5%;
+  bottom: 0;
+  width: 112px;
+  height: 2px;
+  margin: 10px;
+  background-color: #00b068;
+}
+.projectBtnLoad:hover {
+  color: #00b068;
+  transition: color 2 ease-in;
+}
+
+.projectSWrap,
+.projectTWrap {
+  margin-top: 40px;
+}
+
+/* media q  */
+@media (max-width: 359px) {
+  .container {
+    max-width: 320px;
+  }
+}
+@media (min-width: 360px) {
+  .container {
+    max-width: 320px;
+  }
+  .mainNotice {
+    font-size: 52px;
+  }
+  .noticeSpan {
+    font-size: 52px;
+    display: inline;
+    margin-left: 10px;
+  }
+  .wrapBtnText {
+    align-items: flex-end;
+    flex-direction: column;
+  }
+  .projectTextTitle {
+    margin-top: 0;
+  }
+  .myProject {
+    margin-bottom: 80px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 704px;
+    padding: 0 32px;
+  }
+  .titleMain {
+    margin: 0 55px 60px;
+  }
+  .mainNotice {
+    font-weight: 400;
+    font-size: 108px;
+    line-height: 124px;
+    letter-spacing: 1.8px;
+  }
+  .noticeSpan {
+    font-weight: 400;
+    font-size: 108px;
+    line-height: 124px;
+    letter-spacing: 1.8px;
+    margin-left: 20px;
+  }
+  .projectTextTech {
+    display: inline-block;
+    margin-top: 16px;
+  }
+  .wrapBtnText {
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .projectTextTitle {
+    margin-bottom: 0;
+  }
+  .projectSWrap,
+  .projectTWrap {
+    margin-top: 0;
+  }
+  .projectFWrap,
+  .projectSWrap {
+    margin-bottom: 60px;
+  }
+  .myProject {
+    margin-bottom: 124px;
+  }
+}
+@media (min-width: 1179px) {
+  .container {
+    max-width: 1008px;
+    padding-left: 110px;
+    padding-right: 110px;
+    margin: 0 auto;
+  }
+  .titleMain {
+    margin-bottom: 80px;
+  }
+  .projectFWrap,
+  .projectSWrap {
+    margin-bottom: 80px;
+  }
+  .myProject {
+    margin-bottom: 164px;
+  }
+}
