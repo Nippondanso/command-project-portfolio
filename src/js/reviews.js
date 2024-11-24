@@ -1,3 +1,5 @@
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 import axios from 'axios';
 import Swiper from 'swiper';
 import 'swiper/css/bundle';
@@ -7,18 +9,26 @@ axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api/';
 const forwardButton = document.querySelector('.btn-next');
 const backButton = document.querySelector('.btn-prev');
 const noDataMessage = document.querySelector('.error-message');
+const reviewsNavigation = document.querySelector('.reviews-navigation');
+const feedbackWrapper = document.querySelector('.carousel-wrapper');
 
- window.addEventListener('resize', updateButtonState);
+let timer;
 
- document.addEventListener('keydown', e => {
+window.addEventListener('resize', updateButtonState);
+
+document.addEventListener('keydown', e => {
   if (e.key === 'ArrowRight') {
     moveNext();
-  } else if (e.key === 'ArrowLeft') { 
+  } else if (e.key === 'ArrowLeft') {
     movePrev();
   }
 });
 
- function moveNext() {
+feedbackWrapper.addEventListener('touchmove', handlerMove);
+
+feedbackWrapper.addEventListener('mousemove', handlerMove);
+
+function moveNext() {
   carousel.slideNext();
   updateButtonState();
 }
@@ -28,7 +38,7 @@ function movePrev() {
   updateButtonState();
 }
 
- function updateButtonState() {
+function updateButtonState() {
   if (carousel.isBeginning) {
     backButton.classList.add('button-disabled');
   } else {
@@ -45,10 +55,10 @@ function movePrev() {
 forwardButton.addEventListener('click', moveNext);
 backButton.addEventListener('click', movePrev);
 
- const carousel = new Swiper('.swiper', {
+const carousel = new Swiper('.swiper', {
   slidesPerView: 1,
-   spaceBetween: 16,
-  speed:800,
+  spaceBetween: 16,
+  speed: 800,
   breakpoints: {
     0: { slidesPerView: 1 },
     768: { slidesPerView: 1 },
@@ -56,29 +66,37 @@ backButton.addEventListener('click', movePrev);
   },
 });
 
- const feedbackWrapper = document.querySelector('.carousel-wrapper');
-
- async function fetchFeedback() {
+async function fetchFeedback() {
   try {
     const response = await axios('/reviews');
     return response.data;
   } catch (error) {
     noDataMessage.classList.remove('hidden');
-     return [];
+    reviewsNavigation.classList.add('hidden');
+    handlerObserver();
+    return;
   }
 }
 
- async function renderFeedback() {
+async function renderFeedback() {
   const reviews = await fetchFeedback();
 
   if (reviews.length === 0) {
     noDataMessage.classList.remove('hidden');
     return;
   }
+  feedbackWrapper.insertAdjacentHTML('beforeend', createReviewsMarkup(reviews));
 
-  const markup = reviews
-    .map((
-      {review,author,avatar_url}) => `
+  carousel.update();
+  updateButtonState();
+}
+
+renderFeedback();
+
+function createReviewsMarkup(arr) {
+  return arr
+    .map(
+      ({ review, author, avatar_url }) => `
       <div class="swiper-slide feedback-item">
         <p class="feedback-text">${review}</p>
         <div class="feedback-info">
@@ -89,10 +107,29 @@ backButton.addEventListener('click', movePrev);
     `
     )
     .join('');
-
-  feedbackWrapper.insertAdjacentHTML('beforeend', markup);
-  carousel.update();
-  updateButtonState();
 }
 
- renderFeedback();
+function handlerObserver() {
+  const observer = new IntersectionObserver(showMessage, {
+    threshold: 1,
+  });
+  observer.observe(noDataMessage);
+
+  return observer;
+}
+
+function showMessage(entries) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      iziToast.error({
+        message: 'Reviews not found! Please try again later.',
+        position: 'topRight',
+      });
+    }
+  });
+}
+
+function handlerMove() {
+  clearTimeout(timer);
+  timer = setTimeout(updateButtonState, 200);
+}
