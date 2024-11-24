@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/command-project-portfolio/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>command-project-portfolio</title>
+    <script type="module" crossorigin src="/command-project-portfolio/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/command-project-portfolio/assets/vendor-_vbJqNT9.js">
+    <link rel="stylesheet" crossorigin href="/command-project-portfolio/assets/vendor-BXmlgIlX.css">
+    <link rel="stylesheet" crossorigin href="/command-project-portfolio/assets/index-CSDi7jIg.css">
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/command-project-portfolio/favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>command-project-portfolio</title>
-  <script type="module" crossorigin src="/command-project-portfolio/index.js"></script>
-  <link rel="modulepreload" crossorigin href="/command-project-portfolio/assets/vendor-_vbJqNT9.js">
-  <link rel="stylesheet" crossorigin href="/command-project-portfolio/assets/vendor-BXmlgIlX.css">
-  <link rel="stylesheet" crossorigin href="/command-project-portfolio/assets/index-CUa7guX8.css">
-</head>
-
-<body data-theme="light">
-  <main id="app">
-    <header class="additional">
+  <body data-theme="light">
+    <main id="app">
+      <header class="additional">
   <div class="header-container" data-theme="light">
     <nav class="header-nav">
       <a class="logo-text" data-theme="light" href="./index.html"
         >Lloyd<span class="logo-span" data-theme="light">Jefferson.</span></a
       >
+      <div class="theme-switch">
+        <input type="checkbox" id="theme-toggle" />
+        <label for="theme-toggle" class="switch">
+          <span class="slider"></span>
+        </label>
+      </div>
       <ul class="nav-text">
         <li class="nav-text-item">
           <a href="#about-me" class="nav-text-link" data-theme="light"
@@ -32,7 +37,7 @@
           >
         </li>
         <li class="nav-text-item">
-          <a href="#contacts" class="nav-text-link" data-theme="light"
+          <a href="#work-together" class="nav-text-link" data-theme="light"
             >Contacts</a
           >
         </li>
@@ -46,7 +51,7 @@
   </div>
 </header>
 
-    <div class="mobile-menu" data-modal data-theme="light">
+      <div class="mobile-menu" data-modal data-theme="light">
   <div class="modal-first" data-theme="light">
     <a class="logo-text" data-theme="light" href="./index.html"
       >Lloyd<span class="logo-span" data-theme="light">Jefferson.</span></a
@@ -70,6 +75,13 @@
   </div>
   <div class="modal-second">
     <nav class="modal-nav">
+      <div class="modal-theme-switch">
+        <input type="checkbox" id="theme-toggle" />
+        <label for="theme-toggle" class="modal-switch">
+          <span class="modal-slider"></span>
+        </label>
+      </div>
+
       <ul class="modal-nav-list">
         <li class="modal-nav-item">
           <a class="modal-nav-link" data-theme="light" href="#about-me">
@@ -82,7 +94,7 @@
           </a>
         </li>
         <li class="modal-nav-item">
-          <a class="modal-nav-link" data-theme="light" href="#contacts">
+          <a class="modal-nav-link" data-theme="light" href="#work-together">
             Contacts
           </a>
         </li>
@@ -91,7 +103,7 @@
   </div>
 </div>
 
-    <section class="about-section" data-theme="light" id="about-me">
+      <section class="about-section" data-theme="light" id="about-me">
     <h2 class="about-section-header" data-theme="light">ABOUT <span class="highlight"
         data-theme="light">ME</span></h2>
     <div class="about-bio-section">
@@ -149,7 +161,7 @@
         </div>
     </div>
 </section>
-    <section class="tech-skills">
+      <section class="tech-skills">
   <h2 class="visually-hidden">Technical Skills</h2>
   <div class="wrap">
     <div class="items-wrap upper-background" id="tech-skills-upper">
@@ -248,7 +260,7 @@
   </div>
 </section>
 
-    <section class="questions-section" data-theme="light">
+      <section class="questions-section" data-theme="light">
     <h2 class="questions-section-header" data-theme="light">Frequently asked <span class="question-accent"
             data-theme="light">question</span></h2>
     <ul id="questions-list">
@@ -380,7 +392,7 @@
         </li>
     </ul>
 </section>
-    <section class="section-reviews" id="reviews">
+      <section class="section-reviews" id="reviews">
   <div class="container">
     <h2 class="title-reviews">REVIEWS</h2>
     <div class="swiper">
@@ -404,7 +416,7 @@
     </div>
   </div>
 </section>  
-    <section id="work-together" class="contact-section" data-theme='light'>
+      <section id="work-together" class="contact-section" data-theme='light'>
   <div>
     <h2 class="title">Let's <span>work together</span></h2>
   </div>
@@ -454,7 +466,6 @@
   </div>
 
 </section>
-  </main>
-</body>
-
+    </main>
+  </body>
 </html>
