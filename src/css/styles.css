@@ -6,7 +6,8 @@
 @import url('./mobile-menu.css');
 @import url('./tech-skills.css');
 @import url('./question-section.css');
-@import url('./reviews.css');   
+@import url('./work-together.css');
+@import url('./reviews.css');
 
 :root {
   --font-family: 'Poppins', sans-serif;
