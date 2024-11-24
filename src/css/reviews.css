@@ -18,7 +18,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .section-reviews {
     margin-bottom: 80px;
   }
@@ -35,16 +35,16 @@
   margin-bottom: 80px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .title-reviews {
     margin-bottom: 60px;
+    height: 64px;
+    font-size: 52px;
   }
 }
 @media (max-width: 360px) {
   .title-reviews {
     margin-bottom: 40px;
-    height: 64px;
-    font-size: 52px;
   }
 }
 
