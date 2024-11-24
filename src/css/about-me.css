@@ -210,7 +210,7 @@
     background-position: 368px 856px;
     background-repeat: no-repeat;
     background-size: 346px 264px;
-    max-width: none;
+    max-width: 768px;
   }
   .about-section-header {
     font-size: 108px;
@@ -265,6 +265,7 @@
     );
     background-position: 800px 700px;
     background-size: 396px 302px;
+    max-width: 1280px;
   }
   .about-images {
     margin-top: 312px;
