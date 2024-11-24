@@ -233,7 +233,7 @@
   }
   .about-bio-section {
     display: flex;
-    gap: 32px;
+    justify-content: space-between;
     max-width: 704px;
   }
   .about-panel {
