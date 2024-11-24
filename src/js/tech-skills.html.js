@@ -1,5 +1,5 @@
 
-import { TECH_SKILLS } from './js/constants';
+import { TECH_SKILLS } from '../constants.js';
 
 const tech = [{
   name: 'HTML/CSS', link: 'https://www.edu.goit.global/uk/learn/24554709/17039071/17039078/training',
